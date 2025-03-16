@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
@@ -14,3 +15,4 @@ Route::get('/session/delete', [SessionController::class, 'delete']);
 Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+Route::get('/cobaerror/{nama?}', [CobaController::class, 'index']);
